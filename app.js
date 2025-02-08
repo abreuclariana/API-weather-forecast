@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true })); // Middleware para processar dados do formulário
 
 // Rota principal para exibir o HTML do formulário

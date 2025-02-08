@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="/css/style.css">
+ <!-- Arquivo CSS externo -->
 </head>
 <body>
-
- <form action="/" method="post">
-     <label for="">Nome da Cidade
-       <input id ="cityInput" type="text" name="cityName">
-    </label>
-    <button type="submit">Enviar</button>
-
- </form>
+    <div class="container">
+        <h1>🌦️ Consulta de Previsão do Tempo</h1>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="cityInput">Nome da Cidade</label>
+                <input id="cityInput" type="text" name="cityName" placeholder="Digite a cidade" required>
+            </div>
+            <button type="submit">🔍 Buscar</button>
+        </form>
+    </div>
 </body>
 </html>
