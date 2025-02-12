@@ -1,66 +1,105 @@
-# 🌦️ Projeto Previsão do Tempo
+# Weather Forecast App 🌦️
 
-Este projeto utiliza **Node.js**, **Express** e **OpenWeatherMap API** para exibir a previsão do tempo com base no nome de uma cidade inserida pelo usuário.
+## Description
+This is a simple weather forecast application built with **Node.js, Express, and EJS**. It allows users to search for a city and retrieve the current temperature, weather description, and an icon representing the weather conditions. The app fetches real-time weather data from the **OpenWeatherMap API**.
 
-## 🚀 Tecnologias Utilizadas
+---
+
+## Features 🚀
+- Search for the weather by city name.
+- Displays temperature, weather description, and an icon.
+- Uses **EJS** for templating.
+- Styled with **Bootstrap**.
+- Handles errors when a city is not found or when there's a connection issue.
+
+---
+
+## Technologies Used 🛠️
 - **Node.js**
 - **Express.js**
+- **EJS (Embedded JavaScript Templates)**
 - **Body-parser**
-- **HTTPS (módulo nativo do Node.js)**
+- **Bootstrap (via Cloudflare CDN)**
 - **OpenWeatherMap API**
 
-## 📌 Como Executar o Projeto
+---
 
-### 1️⃣ Instale as Dependências
-Certifique-se de ter o [Node.js](https://nodejs.org/) instalado. Depois, instale as dependências do projeto rodando o seguinte comando no terminal:
+## Installation 🏗️
 
+### 1️⃣ Clone the repository
 ```sh
-npm install express body-parser
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
 ```
 
-### 2️⃣ Obtenha uma API Key do OpenWeatherMap
-Registre-se no site [OpenWeatherMap](https://openweathermap.org/api) e obtenha uma **API Key** gratuita.
+### 2️⃣ Install dependencies
+```sh
+npm install
+```
 
-### 3️⃣ Execute o Servidor
-Substitua `SUA_API_KEY` no código pelo valor correto e inicie o servidor com o comando:
-
+### 3️⃣ Run the application
 ```sh
 node app.js
 ```
 
-O servidor rodará na porta **3002**. Acesse:
-
-```
-http://localhost:3002/
-```
-
-## 📥 Estrutura do Projeto
-```
-projeto-tempo/
-├── index.html   # Formulário para inserção da cidade
-├── app.js       # Código principal do servidor
-├── package.json # Arquivo de configuração do Node.js
-└── README.md    # Documentação do projeto
-```
-
-## 📜 Como Funciona
-1. O usuário insere o nome de uma cidade no **formulário** (`index.html`).
-2. O servidor **Express** recebe o dado e faz uma requisição para a API do **OpenWeatherMap**.
-3. O servidor retorna a previsão do tempo para a cidade inserida, incluindo:
-   - **Temperatura (°C)**
-   - **Descrição do clima** (Ex: Chuva leve, Sol, Nublado)
-   - **Ícone representativo do clima**
-
-## ⚠️ Possíveis Erros e Soluções
-| Erro | Possível Causa | Solução |
-|------|---------------|----------|
-| `404 Not Found` | Nome da cidade digitado errado ou API Key inválida | Verifique se digitou corretamente a cidade e se a API Key está ativa |
-| `TypeError: Cannot read properties of undefined` | A resposta da API não tem os dados esperados | Verifique se a API está retornando os campos corretamente |
-| `EADDRINUSE: address already in use` | A porta **3002** já está sendo usada | Use outra porta ou finalize o processo anterior com `kill -9 PID` |
-
-## 📜 Licença
-Este projeto está sob a licença **MIT**. Sinta-se à vontade para usá-lo e modificá-lo! 😊
+### 4️⃣ Open in browser
+Go to **http://localhost:3002**
 
 ---
-💡 **Dúvidas ou sugestões?** Me avise! 🚀
+
+## Project Structure 📂
+```
+weather-app/
+│── assets/           # Folder for images
+│   ├── time.png      # Weather-related image
+│── public/           # Static files (CSS, JS, etc.)
+│   ├── css/          # Stylesheets
+│   │   ├── style.css # Custom styles
+│── views/            # EJS templates
+│   ├── index.ejs     # Main page template
+│── app.js            # Main server file
+│── package.json      # Project dependencies
+│── README.md         # Documentation
+```
+
+---
+
+## API Key 🔑
+This application requires an **API key** from OpenWeatherMap. Replace the `apiKey` value in `app.js` with your own API key:
+
+```js
+const apiKey = 'YOUR_API_KEY_HERE';
+```
+
+To get an API key, visit: [https://home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys)
+
+---
+
+## Screenshot 🖼️
+
+![Weather App Preview](assets/time.png)
+
+---
+
+## License 📜
+This project is open-source and available under the **MIT License**.
+
+---
+
+## Author 👩‍💻
+[Your Name] - [Your GitHub Profile](https://github.com/your-username)
+
+---
+
+## Future Improvements 🔮
+- Add a **5-day weather forecast**.
+- Implement a **geolocation feature** to get the user's current weather automatically.
+- Improve the **UI/UX design**.
+- Support for **multiple languages**.
+
+---
+
+### Feel free to contribute! 🤝
+
+
 
