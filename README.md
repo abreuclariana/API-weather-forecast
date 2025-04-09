@@ -77,7 +77,7 @@ To get an API key, visit: [https://home.openweathermap.org/api_keys](https://hom
 
 ## Screenshot 🖼️
 
-![Weather App Preview](.assets/time.png)
+![Weather App Preview](assets/time.png)
 
 ---
 
